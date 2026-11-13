@@ -13,10 +13,9 @@ framework. It looks and behaves like the Windows Explorer details view, but is b
 **many windows at once**: every window is its own process, is numbered, can be coloured, and can be
 reached with global hotkeys.
 
-The full behavioural specification (English is normative; also in 简体中文, 繁體中文, 日本語,
-Français) lives in [`specification/SPEC.en.md`](specification/SPEC.en.md). This document is a
-feature tour with illustrations — every picture below is a wireframe mockup built from the app's own
-colours and layout, not a real screenshot.
+The full, normative behavioural specification is kept as an internal document and isn't part of this
+public repository. This document is a feature tour with illustrations instead — every picture below is
+a wireframe mockup built from the app's own colours and layout, not a real screenshot.
 
 ![miniExpo overview](docs/images/hero.svg)
 
@@ -171,8 +170,8 @@ position and size, monitor included.
 | `src/platform/menu_icons.rs` | the five own menu icons, drawn in code |
 | `src/platform/stub.rs` | no-op versions so the UI builds on Linux/macOS |
 
-See [`specification/SPEC.en.md`](specification/SPEC.en.md) for the full, normative behaviour spec
-(requirement IDs, edge cases, and the Windows-API-level detail behind each feature).
+The full, normative behaviour spec (requirement IDs, edge cases, and the Windows-API-level detail
+behind each feature) is kept as an internal document and isn't published in this repository.
 
 ## License
 

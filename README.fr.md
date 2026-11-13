@@ -15,10 +15,9 @@ comme elle, mais il est conçu pour faire tourner **de nombreuses fenêtres à l
 est son propre processus, porte un numéro, peut être colorée et peut être rappelée par des raccourcis
 globaux.
 
-La spécification complète du comportement (l'anglais fait foi ; également disponible en 简体中文,
-繁體中文, 日本語 et Français) se trouve dans
-[`specification/SPEC.fr.md`](specification/SPEC.fr.md). Ce document est une visite guidée des
-fonctionnalités, illustrée — chaque image ci-dessous est une maquette filaire construite à partir des
+La spécification complète et normative du comportement est conservée comme document interne et ne fait
+pas partie de ce dépôt public. Ce document est une visite guidée des fonctionnalités, illustrée à la
+place — chaque image ci-dessous est une maquette filaire construite à partir des
 couleurs et de la mise en page de l'application elle-même, pas une vraie capture d'écran.
 
 ![Vue d'ensemble de miniExpo](docs/images/hero.svg)
@@ -189,9 +188,9 @@ rouvre à son dossier, sa position et sa taille enregistrés, écran compris.
 | `src/platform/menu_icons.rs` | les cinq icônes de menu propres à miniExpo, dessinées dans le code |
 | `src/platform/stub.rs` | des versions sans effet pour que l'interface compile sous Linux/macOS |
 
-Voir [`specification/SPEC.fr.md`](specification/SPEC.fr.md) pour le détail complet et normatif du
-comportement (identifiants d'exigences, cas limites, et le détail au niveau de l'API Windows derrière
-chaque fonctionnalité).
+Le détail complet et normatif du comportement (identifiants d'exigences, cas limites, et le détail au
+niveau de l'API Windows derrière chaque fonctionnalité) est conservé comme document interne et n'est
+pas publié dans ce dépôt.
 
 ## Licence
 

@@ -10,9 +10,8 @@
 一个小巧、快速的 Windows 文件管理器，使用 Rust 和 [GPUI](https://www.gpui.rs/) UI 框架编写。它的外观和操作方式与
 Windows 资源管理器的详细信息视图类似，但围绕"**同时运行多个窗口**"来设计：每个窗口都是独立进程，带编号，可以上色，并且可以用全局热键唤出。
 
-完整的行为规格说明（以英文版为准；同时提供简体中文、繁體中文、日本語、Français 版本）在
-[`specification/SPEC.zh-CN.md`](specification/SPEC.zh-CN.md)。本文档是一份带插图的功能导览——下面每一张图都是用
-软件本身的配色和布局手绘的线框示意图，而不是真实截图。
+完整的、具有规范效力的行为规格说明作为内部文档保存，不包含在这个公开仓库里。本文档是一份带插图的功能导览——
+下面每一张图都是用软件本身的配色和布局手绘的线框示意图，而不是真实截图。
 
 ![miniExpo 总览](docs/images/hero.svg)
 
@@ -152,8 +151,8 @@ Windows 资源管理器的详细信息视图类似，但围绕"**同时运行多
 | `src/platform/menu_icons.rs` | 五个自有菜单图标，代码绘制 |
 | `src/platform/stub.rs` | 空实现，让 UI 能在 Linux/macOS 上编译 |
 
-完整的、具有规范效力的行为细节（需求编号、边界情况，以及每个功能背后的 Windows API 级别细节）见
-[`specification/SPEC.zh-CN.md`](specification/SPEC.zh-CN.md)。
+完整的、具有规范效力的行为细节（需求编号、边界情况，以及每个功能背后的 Windows API 级别细节）作为内部文档保存，
+未包含在这个公开仓库中。
 
 ## 许可证
 
