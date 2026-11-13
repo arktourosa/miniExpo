@@ -2,6 +2,12 @@
 
 **Languages:** **English** · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · [Français](README.fr.md)
 
+**Why this exists:** it's designed for how work actually happens now, with several AI coding agents,
+background jobs, and your own hands all reading, writing, moving and renaming files across a project
+at the same time. A single heavyweight Explorer window doesn't scale to that. miniExpo makes windows
+cheap and disposable instead — open one per task or per agent, tell them apart at a glance by colour,
+and jump straight to the right one with a hotkey instead of hunting through a crowded taskbar.
+
 A small, fast file manager for Windows, written in Rust with the [GPUI](https://www.gpui.rs/) UI
 framework. It looks and behaves like the Windows Explorer details view, but is built around running
 **many windows at once**: every window is its own process, is numbered, can be coloured, and can be

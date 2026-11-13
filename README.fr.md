@@ -2,6 +2,13 @@
 
 **Langues :** [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · [日本語](README.ja.md) · **Français**
 
+**Pourquoi ce projet existe :** il est conçu pour la façon dont on travaille réellement aujourd'hui, où
+plusieurs agents de codage IA, des tâches en arrière-plan et vos propres mains lisent, écrivent,
+déplacent et renomment des fichiers d'un même projet en même temps. Une seule fenêtre Explorateur,
+lourde, ne tient pas la charge. miniExpo rend les fenêtres légères et jetables à la place : on en ouvre
+une par tâche ou par agent, on les distingue d'un coup d'œil grâce à la couleur, et on saute directement
+à la bonne avec un raccourci au lieu de fouiller une barre des tâches surchargée.
+
 Un gestionnaire de fichiers Windows petit et rapide, écrit en Rust avec le framework d'interface
 [GPUI](https://www.gpui.rs/). Il ressemble à la vue détaillée de l'Explorateur Windows et se comporte
 comme elle, mais il est conçu pour faire tourner **de nombreuses fenêtres à la fois** : chaque fenêtre
