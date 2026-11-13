@@ -1,0 +1,53 @@
+[package]
+name = "miniexpo"
+version = "0.1.0"
+edition = "2021"
+description = "miniExpo - a small file manager"
+
+[[bin]]
+name = "miniexpo"
+path = "src/main.rs"
+
+[dependencies]
+gpui = "0.2.2"
+chrono = "0.4"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+notify = "8"
+png = "0.17"
+raw-window-handle = "0.6"
+# Declared for every target (not only Windows) so the Windows-only module can be type-checked
+# on other hosts with `RUSTFLAGS="--cfg miniexpo_check" cargo check`.
+# The #[implement] macro expands to ::windows_core:: paths, so that crate must be a direct
+# dependency under its own name.
+windows-core = "0.57"
+windows = { version = "0.57", features = [
+    "implement",
+    "Win32_Foundation",
+    "Win32_Security",
+    "Win32_Graphics_Dwm",
+    "Win32_Graphics_Gdi",
+    "Win32_Storage_FileSystem",
+    "Win32_System_Com",
+    "Win32_System_Com_StructuredStorage",
+    "Win32_System_DataExchange",
+    "Win32_System_LibraryLoader",
+    "Win32_System_Memory",
+    "Win32_System_Ole",
+    "Win32_System_SystemServices",
+    "Win32_System_Threading",
+    "Win32_UI_Controls",
+    "Win32_UI_Input_KeyboardAndMouse",
+    "Win32_UI_Shell",
+    "Win32_UI_Shell_Common",
+    "Win32_UI_WindowsAndMessaging",
+] }
+
+[target.'cfg(windows)'.build-dependencies]
+winresource = "0.1"
+
+[profile.release]
+opt-level = 3
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(miniexpo_check)'] }
