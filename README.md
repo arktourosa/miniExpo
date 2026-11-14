@@ -39,6 +39,15 @@ shows up in three places at once: the title bar, a badge on the window's own tas
 windows are never grouped into one button), and a very faint watermark of the number drawn behind the
 file list itself. The colour returns to the pool the moment the window closes.
 
+### A taskbar button per window, never grouped
+
+![Taskbar never merges windows](docs/images/taskbar-no-merge.svg)
+
+Most apps collapse several open windows into one taskbar button, so you have to click it and then pick
+the right one from a flyout. miniExpo never does that: every window keeps its own button for as long
+as it's open, coloured to match its title bar, so you can tell them apart and switch straight to the
+right one without an extra click.
+
 ### Address bar and toolbar
 
 ![Address bar and toolbar](docs/images/address-toolbar.svg)
@@ -67,6 +76,15 @@ Folders first, natural case-insensitive sort (`file2` before `file10`), sizes ro
 with thousands separators, dates as `M/D/YYYY h:mm AM/PM`. A file changed in the last 30 minutes gets
 a small green pill behind its name — nothing else on the row changes. Icons come straight from the
 shell, so they match whatever Explorer would show.
+
+### Double-click any blank space to go up a level
+
+![Double-click empty space to go up a level](docs/images/up-level.svg)
+
+You don't have to aim for the `..` row. Double-clicking anywhere empty — the blank area after a short
+file name, the space below the last row, the gap between the Size and Date columns — goes up one
+folder, exactly like double-clicking `..` itself. A single click there just clears the selection
+instead, so it's safe to click around without worrying about navigating by accident.
 
 ### Selecting things the way you'd expect
 
@@ -127,15 +145,23 @@ buttons on the right grow the window ×1.25, shrink it ×0.75, or reset it to th
 while staying on screen and above the 200×260 minimum. A plain press on the bar's empty space moves
 the window, the same as pressing on any other blank area.
 
+### Move the window from anywhere inside it
+
+![Alt+drag or right-click-hold to move the window](docs/images/window-drag.svg)
+
+No need to grab the title bar. Holding **Left Alt** and the left button, or just **holding the right
+button down**, and dragging from anywhere in the window — blank space, a row, even the status bar —
+moves the whole window, snapping to screen edges the same way dragging the title bar does. The
+right-button version still shows the context menu normally if you release without moving the pointer
+past a small threshold first.
+
 ### Many windows, one set of hotkeys, and sessions that come back
 
 ![Multi-window, hotkeys and sessions](docs/images/multi-window-sessions.svg)
 
 **Win+Q** opens a fresh window at My Computer from anywhere. **Left Alt+Q** cycles to the next
 miniExpo window; **Left Alt+0** through **Left Alt+9** jump straight to the window with that instance
-number. Any window can be moved by **Left Alt + drag**, or by **holding the right button and
-dragging**, from anywhere inside it — both snap to screen edges the way dragging the title bar does.
-On a true cold start (no folder argument, not a `--restore-window` re-spawn, no other instance
+number. On a true cold start (no folder argument, not a `--restore-window` re-spawn, no other instance
 already running), every window left open at the end of the previous run reopens at its saved folder,
 position and size, monitor included.
 

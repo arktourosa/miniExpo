@@ -46,6 +46,16 @@ barre de titre, un badge sur le bouton de cette fenêtre dans la barre des tâch
 donc jamais regroupés en un seul), et un filigrane très discret du numéro dessiné derrière la liste des
 fichiers. La couleur retourne dans le pot commun dès que la fenêtre se ferme.
 
+### Un bouton de barre des tâches par fenêtre, jamais regroupé
+
+![La barre des tâches ne regroupe jamais les fenêtres](docs/images/taskbar-no-merge.svg)
+
+La plupart des applications regroupent plusieurs fenêtres ouvertes sous un seul bouton de la barre des
+tâches, et il faut cliquer sur ce bouton puis choisir la bonne fenêtre dans un menu. miniExpo ne fait
+jamais ça : chaque fenêtre garde son propre bouton tant qu'elle est ouverte, coloré pour correspondre à
+sa barre de titre, afin qu'on puisse les distinguer et passer directement à la bonne sans clic
+supplémentaire.
+
 ### Barre d'adresse et barre d'outils
 
 ![Barre d'adresse et barre d'outils](docs/images/address-toolbar.svg)
@@ -78,6 +88,16 @@ arrondies au Ko supérieur avec séparateurs de milliers, et des dates au format
 `M/J/AAAA h:mm AM/PM`. Un fichier modifié dans les 30 dernières minutes reçoit une petite pastille
 verte derrière son seul nom — rien d'autre sur la ligne ne change. Les icônes viennent directement du
 shell, donc elles correspondent à ce que montrerait l'Explorateur.
+
+### Double-cliquer sur un espace vide pour monter d'un niveau
+
+![Double-cliquer sur un espace vide pour monter d'un niveau](docs/images/up-level.svg)
+
+Pas besoin de viser précisément la ligne `..`. Double-cliquer n'importe où dans l'espace vide — la zone
+après un nom de fichier court, l'espace sous la dernière ligne, l'écart entre les colonnes Taille et
+Date — monte d'un dossier, exactement comme un double-clic sur `..` elle-même. Un simple clic au même
+endroit ne fait que vider la sélection, donc on peut cliquer sans risque sans craindre de naviguer par
+accident.
 
 ### Sélectionner comme on s'y attend
 
@@ -144,16 +164,23 @@ droite agrandissent la fenêtre ×1,25, la réduisent ×0,75, ou la ramènent à
 tout en restant à l'écran et au-dessus du minimum de 200×260. Un simple clic sur la partie vide de la
 barre déplace la fenêtre, comme sur n'importe quelle autre zone vide.
 
+### Déplacer la fenêtre depuis n'importe où à l'intérieur
+
+![Alt+glisser ou maintenir le bouton droit pour déplacer la fenêtre](docs/images/window-drag.svg)
+
+Pas besoin d'attraper la barre de titre. Maintenir **Left Alt** et le bouton gauche, ou simplement
+**maintenir le bouton droit enfoncé**, puis glisser depuis n'importe quel endroit de la fenêtre —
+espace vide, une ligne, ou même la barre d'état — déplace la fenêtre entière, en s'accrochant aux bords
+de l'écran comme le ferait un glissement de la barre de titre. Avec la méthode au bouton droit, relâcher
+sans avoir dépassé un petit seuil de déplacement du pointeur ouvre normalement le menu contextuel.
+
 ### De nombreuses fenêtres, un seul jeu de raccourcis, et des sessions qui reviennent
 
 ![Fenêtres multiples, raccourcis et sessions](docs/images/multi-window-sessions.svg)
 
 **Win+Q** ouvre une nouvelle fenêtre sur Ce PC depuis n'importe où. **Left Alt+Q** passe à la fenêtre
 miniExpo suivante ; **Left Alt+0** à **Left Alt+9** sautent directement à la fenêtre portant ce numéro
-d'instance. N'importe quelle fenêtre peut être déplacée par **Left Alt + glisser**, ou en **maintenant
-le bouton droit enfoncé et en glissant**, depuis n'importe quel endroit de la fenêtre — les deux
-méthodes s'accrochent aux bords de l'écran comme le ferait un glissement de la barre de titre. Lors
-d'un vrai démarrage à froid (sans argument de dossier, pas un redémarrage `--restore-window`, et aucune
+d'instance. Lors d'un vrai démarrage à froid (sans argument de dossier, pas un redémarrage `--restore-window`, et aucune
 autre instance déjà en cours), chaque fenêtre encore ouverte à la fin de la session précédente se
 rouvre à son dossier, sa position et sa taille enregistrés, écran compris.
 
